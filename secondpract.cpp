@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <chrono>
 const int SIZE_OF_ARR = 100;
 using namespace std;
@@ -212,8 +212,8 @@ int main()
             auto begin = chrono::steady_clock::now();
             bubbleSort(arr);
             auto end = chrono::steady_clock::now();
-            auto elapsed_ms = chrono::duration_cast<std::chrono::milliseconds>(end - begin);
-            cout << "\nВремя: " << elapsed_ms.count() << " мс\n";
+            auto elapsed_ns = chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
+            cout << "\nВремя: " << elapsed_ns.count() << " нс\n";
             isSort = true;
             break;
         }
@@ -222,8 +222,8 @@ int main()
             auto begin = chrono::steady_clock::now();
             shakerSort(arr);
             auto end = chrono::steady_clock::now();
-            auto elapsed_ms = chrono::duration_cast<std::chrono::milliseconds>(end - begin);
-            cout << "\nВремя: " << elapsed_ms.count() << " мс\n";
+            auto elapsed_ns = chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
+            cout << "\nВремя: " << elapsed_ns.count() << " нс\n";
             isSort = true;
             break;
         }
@@ -232,8 +232,8 @@ int main()
             auto begin = chrono::steady_clock::now();
             combSort(arr);
             auto end = chrono::steady_clock::now();
-            auto elapsed_ms = chrono::duration_cast<std::chrono::milliseconds>(end - begin);
-            cout << "\nВремя: " << elapsed_ms.count() << " мс\n";
+            auto elapsed_ns = chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
+            cout << "\nВремя: " << elapsed_ns.count() << " нс\n";
             isSort = true;
             break;
         }
@@ -242,8 +242,8 @@ int main()
             auto begin = chrono::steady_clock::now();
             insertSort(arr);
             auto end = chrono::steady_clock::now();
-            auto elapsed_ms = chrono::duration_cast<std::chrono::milliseconds>(end - begin);
-            cout << "\nВремя: " << elapsed_ms.count() << " мс\n";
+            auto elapsed_ns = chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
+            cout << "\nВремя: " << elapsed_ns.count() << " нс\n";
             isSort = true;
             break;
         }
@@ -255,8 +255,8 @@ int main()
             for (int i = 0; i < SIZE_OF_ARR; i++)
                 cout << arr[i] << " ";
             auto end = chrono::steady_clock::now();
-            auto elapsed_ms = chrono::duration_cast<std::chrono::milliseconds>(end - begin);
-            cout << "\nВремя: " << elapsed_ms.count() << " мс\n";
+            auto elapsed_ns = chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
+            cout << "\nВремя: " << elapsed_ns.count() << " нс\n";
             isSort = true;
             break;
         }
@@ -265,8 +265,8 @@ int main()
             auto begin = chrono::steady_clock::now();
             maxMinElement(arr);
             auto end = chrono::steady_clock::now();
-            auto elapsed_ms = chrono::duration_cast<std::chrono::milliseconds>(end - begin);
-            cout << "\nВремя поиска максимума и минимума: " << elapsed_ms.count() << " мс\n";
+            auto elapsed_ns = chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
+            cout << "\nВремя поиска максимума и минимума: " << elapsed_ns.count() << " нс\n";
             break;
         }
         case 7:
@@ -274,8 +274,8 @@ int main()
             auto begin = chrono::steady_clock::now();
             midElement(arr);
             auto end = chrono::steady_clock::now();
-            auto elapsed_ms = chrono::duration_cast<std::chrono::milliseconds>(end - begin);
-            cout << "\nВремя: " << elapsed_ms.count() << " мс\n";
+            auto elapsed_ns = chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
+            cout << "\nВремя: " << elapsed_ns.count() << " нс\n";
             break;
         }
         case 8:
@@ -320,8 +320,8 @@ int main()
                 cout << "\nЭлемент находится в позиции " << result << endl;
             }
             auto end = chrono::steady_clock::now();
-            auto elapsed_ms = chrono::duration_cast<std::chrono::milliseconds>(end - begin);
-            cout << "\nВремя бинарного поиска: " << elapsed_ms.count() << " мс\n";
+            auto elapsed_ns = chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
+            cout << "\nВремя бинарного поиска: " << elapsed_ns.count() << " нс\n";
             break;
         }
         case 10:
@@ -332,8 +332,8 @@ int main()
             auto begin = chrono::steady_clock::now();
             searchInArray(arr, o);
             auto end = chrono::steady_clock::now();
-            auto elapsed_ms = chrono::duration_cast<std::chrono::milliseconds>(end - begin);
-            cout << "\nВремя обычного поиска: " << elapsed_ms.count() << " мс\n";
+            auto elapsed_ns = chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
+            cout << "\nВремя обычного поиска: " << elapsed_ns.count() << " нс\n";
             break;
         }
         case 11:
@@ -344,8 +344,8 @@ int main()
             auto begin = chrono::steady_clock::now();
             swap(arr[a], arr[b]);
             auto end = chrono::steady_clock::now();
-            auto elapsed_ms = chrono::duration_cast<std::chrono::milliseconds>(end - begin);
-            cout << "\nВремя свапа: " << elapsed_ms.count() << " мс\n";
+            auto elapsed_ns = chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
+            cout << "\nВремя свапа: " << elapsed_ns.count() << " нс\n";
             for (int i = 0; i < SIZE_OF_ARR; i++)
                 cout << arr[i] << " ";
             break;
@@ -357,8 +357,8 @@ int main()
                 auto begin = chrono::steady_clock::now();
                 midElement(arr);
                 auto end = chrono::steady_clock::now();
-                auto elapsed_ms = chrono::duration_cast<std::chrono::milliseconds>(end - begin);
-                cout << "\nВремя: " << elapsed_ms.count() << " мс\n";
+                auto elapsed_ns = chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
+                cout << "\nВремя: " << elapsed_ns.count() << " нс\n";
             }
             else
                 cout << "\nОтсортируйте массив\n";
